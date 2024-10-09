@@ -1,0 +1,195 @@
+nav {
+    background-color: #769DD3;
+    height: 80px;
+}
+
+body {
+    min-height: min-content;
+}
+
+.boton {
+    background-color: #EFD4AB !important;
+    width: 300px;
+    height: 50px;
+    box-shadow: 5px 5px 2.5px rgb(94, 93, 93);
+
+}
+
+#seleccionado {
+    box-shadow: 5px 5px 2.5px rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #F1DCEC !important;
+    height: 70px;
+}
+
+
+@font-face {
+    font-family: "kodchasan";
+    src: url(../fonts/Kodchasan/Kodchasan-SemiBold.ttf);
+}
+
+#botonAnterior {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente:hover {
+    background-color: #EFD4AB !important;
+}
+
+#botonAnterior:hover {
+    background-color: #EFD4AB !important;
+}
+
+#tarjeta-detalle {
+    height: 200px;
+    background-color: #F0EFEE !important;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+    width: 70%;
+}
+
+#estadisticas {
+    height: 280px;
+    background-color: #F0EFEE !important;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+    width: 70%;
+
+}
+
+* {
+    font-family: 'Kodchasan';
+}
+
+nav {
+    background-color: #769DD3;
+    height: 80px;
+    width: 180px;
+}
+
+.boton {
+    background-color: #EFD4AB !important;
+    width: 300px;
+    height: 50px;
+    box-shadow: 5px 5px 2.5px rgb(94, 93, 93);
+
+}
+
+.planta {
+    background-color: #51BC5D !important;
+    height: 40px;
+    width: 140px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.veneno {
+    background-color: #A96AC7 !important;
+    height: 40px;
+    width: 140px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.tamayo-letra {
+    font-size: 20px;
+}
+
+#seleccionado {
+    box-shadow: 5px 5px 2.5px rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #F1DCEC !important;
+    height: 60px;
+    float: inline-end;
+}
+
+@font-face {
+    font-family: "kodchasan";
+    src: url(../fonts/Kodchasan/Kodchasan-SemiBold.ttf);
+}
+
+#botonAnterior {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente:hover {
+    background-color: #EFD4AB !important;
+}
+
+#botonAnterior:hover {
+    background-color: #EFD4AB !important;
+}
+
+.pokemon-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.pokemon-sprite {
+    width: 180px;
+    height: 180px;
+}
+
+.pokemon-name {
+    background: #F0EFEE;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    text-transform: capitalize;
+}
+
+#pokedex {
+    font-size: 60px;
+}
+
+.tipos {
+    margin-left: 4%;
+}
+
+.btn.dropdown-toggle {
+    background-color: #F0EFEE;
+    border-radius: 20px;
+
+
+}
+
+ul.dropdown-menu {
+    background-color: #F0EFEE;
+    border-radius: 20px;
+
+}
+
+a.dropdown-item {
+    background-color: #cf9c69;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.buscar {
+    margin-right: 4%;
+}
