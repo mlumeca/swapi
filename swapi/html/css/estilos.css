@@ -1,0 +1,299 @@
+nav {
+    background-color: #769DD3;
+    height: 80px;
+}
+
+body {
+    min-height: min-content;
+}
+
+.boton {
+    background-color: #EFD4AB !important;
+    width: 300px;
+    height: 50px;
+    box-shadow: 5px 5px 2.5px rgb(94, 93, 93);
+
+}
+
+#seleccionado {
+    box-shadow: 5px 5px 2.5px rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #F1DCEC !important;
+    height: 70px;
+}
+
+
+@font-face {
+    font-family: "kodchasan";
+    src: url(../fonts/Kodchasan/Kodchasan-SemiBold.ttf);
+}
+
+#botonAnterior {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente:hover {
+    background-color: #EFD4AB !important;
+}
+
+#botonAnterior:hover {
+    background-color: #EFD4AB !important;
+}
+
+#tarjeta-detalle {
+    height: 200px;
+    background-color: #F0EFEE !important;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+    width: 70%;
+}
+
+#estadisticas {
+    height: 280px;
+    background-color: #F0EFEE !important;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+    width: 70%;
+
+}
+
+* {
+    font-family: 'Kodchasan';
+}
+
+nav {
+    background-color: #769DD3;
+    height: 80px;
+    width: 180px;
+}
+
+.boton {
+    background-color: #EFD4AB !important;
+    width: 300px;
+    height: 50px;
+    box-shadow: 5px 5px 2.5px rgb(94, 93, 93);
+
+}
+
+.planta {
+    background-color: #51BC5D !important;
+    height: 40px;
+    width: 140px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.veneno {
+    background-color: #A96AC7 !important;
+    height: 40px;
+    width: 140px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.tamayo-letra {
+    font-size: 20px;
+}
+
+#seleccionado {
+    box-shadow: 5px 5px 2.5px rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #F1DCEC !important;
+    height: 60px;
+    float: inline-end;
+}
+
+@font-face {
+    font-family: "kodchasan";
+    src: url(../fonts/Kodchasan/Kodchasan-SemiBold.ttf);
+}
+
+#botonAnterior {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente {
+    background-color: #F0EFEE !important;
+    height: 70px;
+    box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
+}
+
+#botonSiguiente:hover {
+    background-color: #EFD4AB !important;
+}
+
+#botonAnterior:hover {
+    background-color: #EFD4AB !important;
+}
+
+.pokemon-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    /* Añadir padding para que el hover se vea mejor */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transición suave para el color y la transformación */
+}
+
+.pokemon-sprite {
+    width: 180px;
+    height: 180px;
+}
+
+.pokemon-name {
+    background: #F0EFEE;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    text-transform: capitalize;
+
+}
+
+#pokedex {
+    font-size: 60px;
+}
+
+.tipos {
+    margin-left: 3%;
+}
+
+.btn.dropdown-toggle {
+    background-color: #F0EFEE;
+    border-radius: 20px;
+
+
+}
+
+ul.dropdown-menu {
+    background-color: #F0EFEE;
+    border-radius: 20px;
+    width: 120%;
+
+}
+
+
+li>a.dropdown-item {
+    background-color: #95dbba;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.buscar {
+    margin-right: 3%;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.pokemon-name.hover-normal:hover {
+    background-color: #929AA2;
+    color: #000000;
+}
+
+.pokemon-name.hover-fire:hover {
+    background-color: #FF9B54;
+    color: #000000;
+}
+
+.pokemon-name.hover-water:hover {
+    background-color: #4C90D5;
+    color: #000000;
+}
+
+.pokemon-name.hover-grass:hover {
+    background-color: #64BC5C;
+    color: #000000;
+}
+
+.pokemon-name.hover-electric:hover {
+    background-color: #F4D13B;
+    color: #000000;
+    /* Cambiar el color del texto a negro para mejor legibilidad */
+}
+
+.pokemon-name.hover-ice:hover {
+    background-color: #75CFC0;
+    color: #000000;
+}
+
+.pokemon-name.hover-fighting:hover {
+    background-color: #CD406A;
+    color: #000000;
+}
+
+.pokemon-name.hover-poison:hover {
+    background-color: #AE6BCC;
+    color: #000000;
+}
+
+.pokemon-name.hover-ground:hover {
+    background-color: #DA7749;
+    color: #000000;
+}
+
+.pokemon-name.hover-flying:hover {
+    background-color: #92AADD;
+    color: #000000;
+}
+
+.pokemon-name.hover-psychic:hover {
+    background-color: #F97077;
+    color: #000000;
+}
+
+.pokemon-name.hover-bug:hover {
+    background-color: #90C22D;
+    color: #000000;
+}
+
+.pokemon-name.hover-rock:hover {
+    background-color: #C8B88E;
+    color: #000000;
+}
+
+.pokemon-name.hover-ghost:hover {
+    background-color: #5269AE;
+    color: #000000;
+}
+
+.pokemon-name.hover-dragon:hover {
+    background-color: #0B6DC3;
+    color: #000000;
+}
+
+.pokemon-name.hover-dark:hover {
+    background-color: #5D5465;
+    color: #000000;
+}
+
+.pokemon-name.hover-steel:hover {
+    background-color: #5A8FA2;
+    color: #000;
+}
+
+.pokemon-name.hover-fairy:hover {
+    background-color: #EA91E8;
+    color: #000000;
+}

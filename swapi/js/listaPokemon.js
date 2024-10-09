@@ -8,108 +8,104 @@ $(document).ready(function () {
   });
 
   function getPokemonListV2() {
-
     $("#listaPokemon");
     $.ajax({
-      url: "https://pokeapi.co/api/v2/pokemon",
+      url: "https://pokeapi.co/api/v2/pokemon?limit=60",
       method: "GET",
     }).done(function (pokemon) {
+      var listadoPokemon = pokemon.results;
 
-      var listadoPomemon = pokemon.results;
-      listadoPomemon.forEach(function (pokemon) {
+      var pokemonFijos = listadoPokemon.map(function (pokemon) {
         var pokemonId = pokemon.url.split("/")[6];
 
-        var template = `
-                <div class="d-flex justify-content-around col custom-col mt-5">
-                    <div class="pokemon-card text-center">
-                        <a class="text-decoration-none" href="detallePokemon.html?id=${pokemonId}">
-                            <div>
-                                <img class="pokemon-sprite" 
-                                    src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${pokemonId.padStart(3, '0')}.png" />
-                            </div>
-                            <div class="pokemon-name ">
-                                <p class="mt-3">${pokemon.name}</p>
-                                <p>${pokemonId}</p>
-                            </div>
-                        </a>
-                    </div>
+        return $.ajax({
+          url: `https://pokeapi.co/api/v2/pokemon/${pokemonId}`,
+          method: "GET",
+        }).then(function (detallesPokemon) {
 
-                </div>
-                `;
-        $('#listaPokemon').append(template);
+          var tipo = detallesPokemon.types[0].type.name.toLowerCase();
+
+          return `
+            <div class="d-flex justify-content-around col custom-col mt-5">
+              <div class="pokemon-card text-center">
+                <a class="text-decoration-none" href="detallePokemon.html?id=${pokemonId}">
+                  <div>
+                    <img class="pokemon-sprite" 
+                      src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${pokemonId.padStart(3, '0')}.png" />
+                  </div>
+                  <div class="pokemon-name hover-${tipo}">
+                    <p class="mt-3">${pokemon.name}</p>
+                    <p>${pokemonId}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          `;
+        });
       });
 
+      Promise.all(pokemonFijos).then(function (templates) {
+        templates.forEach(function (template) {
+          $('#listaPokemon').append(template);
+        });
+      });
+    });
+  }
+  tiposEspayol();
+
+  function tiposEspayol() {
+    $("#tipoPoke");
+    $.ajax({
+      url: "https://pokeapi.co/api/v2/type?limit=18",
+      method: "GET",
+    }).done(function (tipoPokemon) {
+      var tipos = tipoPokemon.results;
+
+      var coloresTipos = {
+        "normal": "#929AA2",
+        "fuego": "#FF9B54",
+        "agua": "#4C90D5",
+        "planta": "#64BC5C",
+        "eléctrico": "#F4D13B",
+        "hielo": "#75CFC0",
+        "lucha": "#CD406A",
+        "veneno": "#AE6BCC",
+        "tierra": "#DA7749",
+        "volador": "#92AADD",
+        "psíquico": "#F97077",
+        "bicho": "#90C22D",
+        "roca": "#C8B88E",
+        "fantasma": "#5269AE",
+        "dragón": "#0B6DC3",
+        "siniestro": "#5D5465",
+        "acero": "#5A8FA2",
+        "hada": "#EA91E8"
+      };
+
+      tipos.forEach(function (tipo) {
+        $.ajax({
+          url: tipo.url,
+          method: "GET",
+        }).done(function (detallesTipo) {
+          var nombreEspanol = detallesTipo.names.find(function (name) {
+            return name.language.name === 'es';
+          }).name;
+
+          var color = coloresTipos[nombreEspanol.toLowerCase()] || '#000000';
+
+          var template = `
+            <li class="col-6 col-3 pb-2">
+              <a class="dropdown-item text-capitalize" href="#" style="background-color: ${color}; color: #fff;">
+                ${nombreEspanol}
+              </a>
+            </li>
+          `;
+          $('#tipoPoke').append(template);
+        });
+      });
     });
   }
 
-  function fondoTipo(pokemon) {
-
-    var tipo = pokemon.type[0].type.name;
-    var fondo = '';
-
-    switch (tipo) {
-      case 'grass':
-        colorBorde = '#5CBE64';
-        break;
-      case 'fire':
-        colorBorde = '#FBAE46';
-        break;
-      case 'water':
-        colorBorde = '#6CBDE4';
-        break;
-      case 'poison':
-        colorBorde = '#C261D4';
-        break;
-      case 'bug':
-        colorBorde = '#AFC836';
-        break;
-      case 'ground':
-        colorBorde = '#D29463';
-        break;
-      case 'dark':
-        colorBorde = '#9298A4';
-        break;
-      case 'electric':
-        colorBorde = '#FBE273';
-        break;
-      case 'fairy':
-        colorBorde = '#F3A7E7';
-        break;
-      case 'fighting':
-        colorBorde = '#E74347';
-        break;
-      case 'ghost':
-        colorBorde = '#7773D4';
-        break;
-      case 'ice':
-        colorBorde = '#8CDDD4';
-        break;
-      case 'normal':
-        colorBorde = '#A3A49E';
-        break;
-      case 'psychic':
-        colorBorde = '#FE9F92';
-        break;
-      case 'rock':
-        colorBorde = '#D7CD90'
-        break;
-      case 'steel':
-        colorBorde = '#58A6AA';
-        break;
-      case 'dragon':
-        colorBorde = '#0180C7';
-        break;
-      case 'flying':
-        colorBorde = '#A6C2F2';
-        break;
-      default:
-        colorBorde = '#000000';
-        break;
-    }
-
-    return colorBorde;
-
-  }
 });
 
 
