@@ -133,16 +133,22 @@ footer {
     border-radius: 20px;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;  /* Ajustar el tamaño del texto */
-    line-height: 1.2;  /* Ajustar la altura de línea */
+    font-size: 24px;
+    /* Ajustar el tamaño del texto */
+    line-height: 1.2;
+    /* Ajustar la altura de línea */
     text-align: center;
     color: black;
     padding: 20px;
     text-transform: capitalize;
-    min-width: 200px;   /* Establecer ancho mínimo */
-    max-width: 300px;   /* Establecer ancho máximo */
-    margin: 0 auto;     /* Centrar el div */
-    white-space: nowrap; /* Evitar saltos de línea */
+    min-width: 200px;
+    /* Establecer ancho mínimo */
+    max-width: 300px;
+    /* Establecer ancho máximo */
+    margin: 0 auto;
+    /* Centrar el div */
+    white-space: nowrap;
+    /* Evitar saltos de línea */
 }
 
 #personajes {
@@ -172,6 +178,7 @@ li>a.dropdown-item {
     border-radius: 20px;
     width: 100%;
     text-align: center;
+
 }
 
 .buscar {
@@ -183,5 +190,6 @@ li>a.dropdown-item {
 }
 
 .row {
-    --bs-gutter-x: 1.5rem; /* Ajusta el espacio horizontal entre las columnas */
-  }
+    --bs-gutter-x: 1.5rem;
+    /* Ajusta el espacio horizontal entre las columnas */
+}
