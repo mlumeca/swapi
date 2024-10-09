@@ -24,7 +24,6 @@ footer {
     height: 70px;
 }
 
-
 @font-face {
     font-family: "kodchasan";
     src: url(../fonts/Kodchasan/Kodchasan-SemiBold.ttf);
@@ -62,7 +61,6 @@ footer {
     background-color: #F0EFEE !important;
     box-shadow: 5px 5px 2.5px rgb(187, 185, 185);
     width: 70%;
-
 }
 
 * {
@@ -80,23 +78,6 @@ nav {
     width: 300px;
     height: 50px;
     box-shadow: 5px 5px 2.5px rgb(94, 93, 93);
-
-}
-
-.planta {
-    background-color: #51BC5D !important;
-    height: 40px;
-    width: 140px;
-    margin-top: 22px;
-    margin-left: 20px;
-}
-
-.veneno {
-    background-color: #A96AC7 !important;
-    height: 40px;
-    width: 140px;
-    margin-top: 22px;
-    margin-left: 20px;
 }
 
 .tamayo-letra {
@@ -138,36 +119,44 @@ footer {
     background-color: #EFD4AB !important;
 }
 
-.pokemon-card {
+.people-card {
     position: relative;
-    width: 300px;
-    height: 400px;
+    height: 250px;
+    padding: 20px;
+    /* Añadir padding para que el hover se vea mejor */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transición suave para el color y la transformación */
 }
 
-.pokemon-sprite {
-    width: 180px;
-    height: 180px;
-}
-
-.pokemon-name {
+.people-name {
     background: #F0EFEE;
     border-radius: 20px;
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 24px;
+    /* Ajustar el tamaño del texto */
+    line-height: 1.2;
+    /* Ajustar la altura de línea */
     text-align: center;
     color: black;
     padding: 20px;
     text-transform: capitalize;
+    min-width: 200px;
+    /* Establecer ancho mínimo */
+    max-width: 300px;
+    /* Establecer ancho máximo */
+    margin: 0 auto;
+    /* Centrar el div */
+    white-space: nowrap;
+    /* Evitar saltos de línea */
 }
 
-#pokedex {
+#personajes {
     font-size: 60px;
 }
 
 .tipos {
-    margin-left: 4%;
+    margin-left: 3%;
 }
 
 .btn.dropdown-toggle {
@@ -180,16 +169,27 @@ footer {
 ul.dropdown-menu {
     background-color: #F0EFEE;
     border-radius: 20px;
-
+    width: 120%;
 }
 
-a.dropdown-item {
-    background-color: #cf9c69;
+
+li>a.dropdown-item {
+    background-color: #95dbba;
     border-radius: 20px;
+    width: 100%;
     text-align: center;
-}
 
+}
 
 .buscar {
-    margin-right: 4%;
+    margin-right: 3%;
+}
+
+.people-card:hover {
+    transform: translateY(-5px);
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    /* Ajusta el espacio horizontal entre las columnas */
 }
